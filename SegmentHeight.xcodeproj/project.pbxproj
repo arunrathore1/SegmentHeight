@@ -11,6 +11,13 @@
 		257F669C2BC5528F0017146F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257F669B2BC5528F0017146F /* ContentView.swift */; };
 		257F669E2BC552910017146F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 257F669D2BC552910017146F /* Assets.xcassets */; };
 		257F66A12BC552910017146F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 257F66A02BC552910017146F /* Preview Assets.xcassets */; };
+		257F66A92BC553610017146F /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257F66A82BC553610017146F /* CustomCameraController.swift */; };
+		257F66AB2BC5538B0017146F /* PhotoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257F66AA2BC5538B0017146F /* PhotoPreviewView.swift */; };
+		257F66AD2BC553BD0017146F /* MyViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257F66AC2BC553BC0017146F /* MyViewControllerWrapper.swift */; };
+		257F66B02BC554070017146F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257F66AF2BC554070017146F /* UIView+Extension.swift */; };
+		257F66B22BC554ED0017146F /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257F66B12BC554ED0017146F /* ImageViewController.swift */; };
+		257F66B42BC5550F0017146F /* GlassDetection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 257F66B32BC5550F0017146F /* GlassDetection.mlmodel */; };
+		257F66B62BC55DCB0017146F /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257F66B52BC55DCB0017146F /* CGPoint+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		257F669B2BC5528F0017146F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		257F669D2BC552910017146F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		257F66A02BC552910017146F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		257F66A82BC553610017146F /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
+		257F66AA2BC5538B0017146F /* PhotoPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPreviewView.swift; sourceTree = "<group>"; };
+		257F66AC2BC553BC0017146F /* MyViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewControllerWrapper.swift; sourceTree = "<group>"; };
+		257F66AF2BC554070017146F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		257F66B12BC554ED0017146F /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		257F66B32BC5550F0017146F /* GlassDetection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GlassDetection.mlmodel; sourceTree = "<group>"; };
+		257F66B52BC55DCB0017146F /* CGPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +49,7 @@
 		257F668D2BC5528F0017146F = {
 			isa = PBXGroup;
 			children = (
+				257F66B32BC5550F0017146F /* GlassDetection.mlmodel */,
 				257F66982BC5528F0017146F /* SegmentHeight */,
 				257F66972BC5528F0017146F /* Products */,
 			);
@@ -51,6 +66,8 @@
 		257F66982BC5528F0017146F /* SegmentHeight */ = {
 			isa = PBXGroup;
 			children = (
+				257F66AE2BC553EA0017146F /* Extension */,
+				257F66A72BC553340017146F /* CameraView */,
 				257F66992BC5528F0017146F /* SegmentHeightApp.swift */,
 				257F669B2BC5528F0017146F /* ContentView.swift */,
 				257F669D2BC552910017146F /* Assets.xcassets */,
@@ -65,6 +82,26 @@
 				257F66A02BC552910017146F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		257F66A72BC553340017146F /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				257F66A82BC553610017146F /* CustomCameraController.swift */,
+				257F66AA2BC5538B0017146F /* PhotoPreviewView.swift */,
+				257F66AC2BC553BC0017146F /* MyViewControllerWrapper.swift */,
+				257F66B12BC554ED0017146F /* ImageViewController.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
+		257F66AE2BC553EA0017146F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				257F66AF2BC554070017146F /* UIView+Extension.swift */,
+				257F66B52BC55DCB0017146F /* CGPoint+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				257F66B02BC554070017146F /* UIView+Extension.swift in Sources */,
+				257F66AB2BC5538B0017146F /* PhotoPreviewView.swift in Sources */,
 				257F669C2BC5528F0017146F /* ContentView.swift in Sources */,
+				257F66B22BC554ED0017146F /* ImageViewController.swift in Sources */,
 				257F669A2BC5528F0017146F /* SegmentHeightApp.swift in Sources */,
+				257F66A92BC553610017146F /* CustomCameraController.swift in Sources */,
+				257F66AD2BC553BD0017146F /* MyViewControllerWrapper.swift in Sources */,
+				257F66B42BC5550F0017146F /* GlassDetection.mlmodel in Sources */,
+				257F66B62BC55DCB0017146F /* CGPoint+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,24 +313,29 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SegmentHeight/Preview Content\"";
 				DEVELOPMENT_TEAM = 873ZSVBQQY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Access the camera for the segment height";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Using this for the testing purpose";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.strome.SegmentHeight;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arun.SegmentHeight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,24 +347,29 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SegmentHeight/Preview Content\"";
 				DEVELOPMENT_TEAM = 873ZSVBQQY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Access the camera for the segment height";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Using this for the testing purpose";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.strome.SegmentHeight;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arun.SegmentHeight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
